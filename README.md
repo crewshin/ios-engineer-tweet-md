@@ -10,7 +10,7 @@ We have already completed a big portion of TweetMD. It's coming along, but we ne
 
 ### Getting Set Up
 1. **FORK** this repository onto your personal GitLab account
-2. Clone your fork: `git clone git@github.com:[your_github_username]/ios-engineer-tweet-md.git`
+2. Clone your fork: `git clone git@gitlab.com:[your_gitlab_username]/ios-engineer-tweet-md.git`
 3. Create a branch named with the following format: `firstName_lastName_tweetMD`. Use this branch for all of your changes.
 4. Open TweetMD.xcworkspace
 
