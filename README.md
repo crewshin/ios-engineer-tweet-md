@@ -9,15 +9,15 @@ TweetMD is a little app we created exclusively for the take home assignment. It 
 We have already completed a big portion of TweetMD. It's coming along, but we need your help to polish it up!
 
 ### Getting Set Up
-1. **FORK** this repository onto your personal GitHub account
+1. **FORK** this repository onto your personal GitLab account
 2. Clone your fork: `git clone git@github.com:[your_github_username]/ios-engineer-tweet-md.git`
 3. Create a branch named with the following format: `firstName_lastName_tweetMD`. Use this branch for all of your changes.
 4. Open TweetMD.xcworkspace
 
 ### Submission Instructions
 1. Complete all tasks and create a pull-request pointing at ****YOUR**** fork with your changes. When creating the pull request, make sure you change the base repository to your own fork's master.
-2. In the settings of your fork, add `@ios-assignment-review` as a collaborator
-3. On your pull request, add `@ios-assignment-review` as a reviewer
+2. In the settings of your fork, add `ios-assignment-review@doximity.com` as a collaborator
+3. On your pull request, add `ios-assignment-review@doximity.com` as a reviewer
 4. If you'd like to include comments to explain your thought process, feel free to do so within the code or in your PR
 5. Please do not add any new third party libraries, but feel free to note in the comments if you were considering doing so.
 
