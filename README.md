@@ -8,6 +8,10 @@ TweetMD is a little app we created exclusively for the take home assignment. It 
 
 We have already completed a big portion of TweetMD. It's coming along, but we need your help to polish it up!
 
+### Xcode Version
+* If you are on Xcode 10, use this `master` branch.
+* If you are on Xcode 11, use the [fix/xcode11](https://gitlab.com/doximity-review/ios-engineer-tweet-md/tree/fix/xcode11) branch.
+
 ### Getting Set Up
 1. **FORK** this repository onto your personal GitLab account
 2. Clone your fork: `git clone git@gitlab.com:[your_gitlab_username]/ios-engineer-tweet-md.git`
