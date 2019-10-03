@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import enum Result.Result
 import Alamofire
 
 enum FetchError: Error {
@@ -22,13 +21,13 @@ enum Constants {
 }
 
 protocol WebProviderContract {
-    func fetchMedicalTweets(completion: @escaping (Result<[Tweet], FetchError>) -> Void)
+    func fetchMedicalTweets(completion: @escaping (Swift.Result<[Tweet], FetchError>) -> Void)
 }
 
 class WebProvider: WebProviderContract {
-    func fetchMedicalTweets(completion: @escaping (Result<[Tweet], FetchError>) -> Void) {
+    func fetchMedicalTweets(completion: @escaping (Swift.Result<[Tweet], FetchError>) -> Void) {
         guard let url = URL(string: Constants.searchTweetsUrlString) else {
-            completion(Result(error: .invalidUrl))
+            completion(.failure(.invalidUrl))
             return
         }
         
@@ -38,18 +37,18 @@ class WebProvider: WebProviderContract {
             .validate()
             .responseJSON { responseData in
                 guard let tweetsData = responseData.data, responseData.result.isSuccess else {
-                    completion(Result(error: .responseFailure))
+                    completion(.failure(.responseFailure))
                     return
                 }
                 
                 guard
                     let tweetsContainer = try? JSONDecoder().decode(TweetsContainer.self, from: tweetsData)
                     else {
-                        completion(Result(error: .serializationError))
+                        completion(.failure(.serializationError))
                         return
                 }
                 
-                completion(Result(value: tweetsContainer.tweets))
+                completion(.success(tweetsContainer.tweets))
         }
     }
 }
