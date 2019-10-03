@@ -5,7 +5,6 @@ target 'TweetMD' do
   use_frameworks!
 
   pod 'Alamofire'
-  pod 'Result'
   
   target 'TweetMDTests' do
     inherit! :search_paths

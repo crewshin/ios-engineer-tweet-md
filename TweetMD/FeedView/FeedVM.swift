@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Result
 
 protocol FeedVMContract {
     var medicalTweets: [Tweet] { get set }
