@@ -11,14 +11,15 @@ We have already completed a big portion of TweetMD. It's coming along, but we ne
 ### Getting Set Up
 1. **FORK** this repository onto your personal GitLab account
 2. Clone your fork: `git clone git@gitlab.com:[your_gitlab_username]/ios-engineer-tweet-md.git`
+    Note: If you logged into GitLab with your GitHub account, you may need to add your [public SSH key](https://gitlab.com/profile/keys) for this to work.
 3. Create a branch named with the following format: `firstName_lastName_tweetMD`. Use this branch for all of your changes.
 4. Open TweetMD.xcworkspace
 
 ### Submission Instructions
-1. Complete all tasks and create a pull-request pointing at ****YOUR**** fork with your changes. When creating the pull request, make sure you change the base repository to your own fork's master.
-2. In the settings of your fork, add `ios-assignment-review@doximity.com` as a collaborator
-3. On your pull request, add `ios-assignment-review@doximity.com` as a reviewer
-4. If you'd like to include comments to explain your thought process, feel free to do so within the code or in your PR
+1. In the settings of your fork, add `ios-assignment-review@doximity.com` as a developer.
+2. Complete all tasks on  ****YOUR**** fork and create a merge request from your `firstName_lastName_tweetMD` branch.
+3. On your merge request, add `ios-assignment-review@doximity.com` as an assignee.
+4. If you'd like to include comments to explain your thought process, feel free to do so within the code or in the description of your merge request.
 5. Please do not add any new third party libraries, but feel free to note in the comments if you were considering doing so.
 
 ### What to Expect after you Submit
