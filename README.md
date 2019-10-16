@@ -24,10 +24,14 @@ We have already completed a big portion of TweetMD. It's coming along, but we ne
 
 ### What to Expect after you Submit
 Our team will be notified and we'll review the submission within 3 days. Among other things, we'll be checking for:
-* Ability to fully meet the requirements of each task as specified
-* Well-architected, robust, and maintainable code
-* Expertise with UIKit and AutoLayout
-* Ability to interpret and leverage existing code and documentation
+* Ability to fully meet the requirements of each task as specified.
+* Attention to detail when it comes to the code style and the lack of unnecessary changes to files which you did not need to modify.
+* Well-architected, robust, and maintainable code.
+* Avoid overly complicated objects, functions, and classes.
+* Expertise with UIKit and AutoLayout.
+* Ability to interpret and leverage existing code and documentation.
+* Performance considerations, how will it behave with 100,000 tweets.
+* Proper test coverage to address logic which you changed and/or added.
 
 We know your time is valuable and appreciate you taking the time to complete this assignment!
 
