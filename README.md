@@ -22,6 +22,9 @@ We have already completed a big portion of TweetMD. It's coming along, but we ne
 4. If you'd like to include comments to explain your thought process, feel free to do so within the code or in the description of your merge request.
 5. Please do not add any new third party libraries, but feel free to note in the comments if you were considering doing so.
 
+### Associate Level Applicants
+If you are applying for an associate position, then Tasks 4 and 5 are optional.
+
 ### What to Expect after you Submit
 Our team will be notified and we'll review the submission within 3 days. Among other things, we'll be checking for:
 * Ability to fully meet the requirements of each task as specified.
@@ -54,13 +57,13 @@ The images on the tweet feed are causing some lag while scrolling. Update the lo
   1. The date label sometimes shows the incorrect time elapsed string. Please find and fix the issue.
   2. Unit tests are a great way to avoid future issues with the time elapsed labels. We've included a test target that integrates the [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble) test frameworks. Please write tests to ensure that the time elapsed method continues to work appropriately.
 
-### Task 4
+### Task 4 (optional for associates)
 We want to highlight user mentions (e.g., @doximity) in the tweet body. The `Tweet` object has a `userMentions` property of type `[UserMention]`, but it is currently initialized to an empty array.
 
 1. Populate the `userMentions` array with any `UserMention`s that are associated with the given tweet
 2. Add functionality to change the text color of user mention names to `UIColor.actionBlue()` in the tweet body label
 
-### Task 5
+### Task 5 (optional for associates)
 Currently, the button to 'favorite' a tweet exists, but it doesn't do anything. Implement the 'favorite' and 'unfavorite' functionality as follows:
   * When tweets are not favorited:
     1. The button should have background color `UIColor.actionBlue()`
