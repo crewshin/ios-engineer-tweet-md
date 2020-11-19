@@ -2,6 +2,8 @@
 
 We would like to thank you for taking the time to complete this assignment. We believe this is an effective way to allow you to show us your skills, on your own time, without the pressure of someone looking over your shoulder. Your code will be used to help us decide if we'd like to proceed with the interview process. Please understand that completing this assignment doesn't guarantee a job or follow up interviews. We will keep you posted either way.
 
+If you have any issues or questions along the way and need to reach out to someone, send an email to [ios-tweetmd@doximity.com](mailto://ios-tweetmd@doximity.com).
+
 # TweetMD
 
 TweetMD is a little app we created exclusively for the take home assignment. It allows clinicians to stay up to date on the latest medical tweets! It uses the [Twitter API](https://dev.twitter.com/rest/public) to fetch the top 30 recent tweets about 'medicine' and displays them for your viewing pleasure (regardless of actual relevance to medicine...)
@@ -28,7 +30,7 @@ If you are applying for an associate position, then Tasks 4 and 5 are optional.
 ### What to Expect after you Submit
 Our team will be notified and we'll review the submission within 3 days. Among other things, we'll be checking for:
 * Ability to fully meet the requirements of each task as specified.
-* Attention to detail when it comes to the code style and the lack of unnecessary changes to files which you did not need to modify.
+* Attention to detail when it comes to the code style.
 * Well-architected, robust, and maintainable code.
 * Avoid overly complicated objects, functions, and classes.
 * Expertise with UIKit and AutoLayout.
