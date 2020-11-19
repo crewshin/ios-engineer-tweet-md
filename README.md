@@ -2,7 +2,7 @@
 
 We would like to thank you for taking the time to complete this assignment. We believe this is an effective way to allow you to show us your skills, on your own time, without the pressure of someone looking over your shoulder. Your code will be used to help us decide if we'd like to proceed with the interview process. Please understand that completing this assignment doesn't guarantee a job or follow up interviews. We will keep you posted either way.
 
-If you have any issues or questions along the way and need to reach out to someone, send an email to [ios-tweetmd@doximity.com](mailto://ios-tweetmd@doximity.com).
+If you have any issues or questions along the way and need to reach out to someone, send an email to [ios-tweetmd@doximity.com](mailto:ios-tweetmd@doximity.com).
 
 # TweetMD
 
