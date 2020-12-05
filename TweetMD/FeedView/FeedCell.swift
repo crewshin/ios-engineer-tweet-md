@@ -20,17 +20,22 @@ class FeedCell: UITableViewCell {
     @IBOutlet private var contentLabel: UILabel!
     @IBOutlet private var timeElapsedLabel: UILabel!
     
+    // This was interesting. In this case I needed a decent chunk of logic to handle finding the user handles in a string so I was going to create a view model, however I also figured this logic might be handy in other areas of the app (in the future), so I decided to just create a logic controller that's a bit less tied to the view itself and more shareable throughout the app.
+    let tweetLogicController = TweetLC()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         thumbnailImage.layer.cornerRadius = 5.0
         thumbnailImage.clipsToBounds = true
+        
+        setupColors()
     }
     
     func configure(with tweet: Tweet) {
         nameLabel.text = tweet.author.name
         handleLabel.text = tweet.author.handle
-        contentLabel.text = tweet.text
+        contentLabel.attributedText = tweetLogicController.buildAttributedContentString(text: tweet.text)
         timeElapsedLabel.text = Date.timeElapsedString(since: tweet.createdAt)
         
         if
@@ -40,5 +45,12 @@ class FeedCell: UITableViewCell {
         } else {
             thumbnailImage.image = nil
         }
+    }
+    
+    func setupColors() {
+        nameLabel.textColor = .foregroundPrimary
+        handleLabel.textColor = .foregroundSecondary
+        timeElapsedLabel.textColor = .foregroundSecondary
+        contentLabel.textColor = .foregroundPrimary
     }
 }

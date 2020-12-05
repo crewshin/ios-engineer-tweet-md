@@ -9,8 +9,40 @@
 import Foundation
 import UIKit
 
-extension UIColor {
-    static func actionBlue() -> UIColor {
-        return UIColor(red: 83.0/255.0, green: 145.0/255.0, blue: 202.0/255.0, alpha: 1.0)
+extension UIColor {    
+    static var foregroundPrimary: UIColor {
+        return UIColor(hex: "000000")
     }
+    
+    static var foregroundSecondary: UIColor {
+        return UIColor(hex: "9B9B9B")
+    }
+    
+    static var foregroundRetweetedUser: UIColor {
+        return UIColor(hex: "6191C5")
+    }
+
+    /// Usage: UIColor(hex: "385C37")
+    convenience init(hex: String) {
+        var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        assert(cString.count == 6, "String needs 6 characters as input")
+        
+        var rgbValue: UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+        
+        self.init(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    
 }
+

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,9 @@
 		5ED44E0921FA70CB004E34AA /* TweetDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED44E0821FA70CB004E34AA /* TweetDetailVM.swift */; };
 		5ED44E0B21FA8575004E34AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED44E0A21FA8574004E34AA /* UIColor+Extensions.swift */; };
 		5ED44E0F21FBB654004E34AA /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED44E0E21FBB654004E34AA /* LaunchView.xib */; };
+		7ED94E97257BE590006D53EC /* UIColor+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */; };
+		7ED94E9D257BECD7006D53EC /* TweetLC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94E9C257BECD7006D53EC /* TweetLC.swift */; };
+		7ED94EA1257BFE3D006D53EC /* TweetLCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		5ED44E0821FA70CB004E34AA /* TweetDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailVM.swift; sourceTree = "<group>"; };
 		5ED44E0A21FA8574004E34AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		5ED44E0E21FBB654004E34AA /* LaunchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
+		7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		7ED94E9C257BECD7006D53EC /* TweetLC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLC.swift; sourceTree = "<group>"; };
+		7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLCTests.swift; sourceTree = "<group>"; };
 		9B6E9C7B04D9A5CE84C1EDD4 /* Pods-TweetMDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetMDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetMDTests/Pods-TweetMDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9FD74DE93EEB17F2608C18C /* Pods-TweetMD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetMD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetMD/Pods-TweetMD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,8 +144,10 @@
 		5E1505C621E95BD30094FF45 /* TweetMDTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E1505C721E95BD30094FF45 /* TweetMDTests.swift */,
 				5E1505C921E95BD30094FF45 /* Info.plist */,
+				5E1505C721E95BD30094FF45 /* TweetMDTests.swift */,
+				7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */,
+				7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */,
 			);
 			path = TweetMDTests;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 				5ED44DEF21F15F49004E34AA /* FeedVM.swift */,
 				5ED44DF621F7B9A1004E34AA /* FeedCell.swift */,
 				5ED44DF821F7B9AA004E34AA /* FeedCell.xib */,
+				7ED94E9C257BECD7006D53EC /* TweetLC.swift */,
 			);
 			path = FeedView;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 				5E1505B521E95BD00094FF45 /* FeedVC.swift in Sources */,
 				5ED44DFB21F7C974004E34AA /* WebProvider.swift in Sources */,
 				5ED44E0921FA70CB004E34AA /* TweetDetailVM.swift in Sources */,
+				7ED94E9D257BECD7006D53EC /* TweetLC.swift in Sources */,
 				5E1505B321E95BD00094FF45 /* AppDelegate.swift in Sources */,
 				5ED44DF721F7B9A2004E34AA /* FeedCell.swift in Sources */,
 				5ED44E0B21FA8575004E34AA /* UIColor+Extensions.swift in Sources */,
@@ -408,6 +418,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E1505C821E95BD30094FF45 /* TweetMDTests.swift in Sources */,
+				7ED94EA1257BFE3D006D53EC /* TweetLCTests.swift in Sources */,
+				7ED94E97257BE590006D53EC /* UIColor+ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PRDNMQMLZ9;
+				DEVELOPMENT_TEAM = 634BMM2SZM;
 				INFOPLIST_FILE = TweetMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,7 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PRDNMQMLZ9;
+				DEVELOPMENT_TEAM = 634BMM2SZM;
 				INFOPLIST_FILE = TweetMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

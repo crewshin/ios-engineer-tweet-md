@@ -35,8 +35,8 @@
                             <constraint firstAttribute="height" constant="50" id="gwM-4X-zdz"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igL-JQ-hu4">
-                        <rect key="frame" x="70" y="36" width="59" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igL-JQ-hu4">
+                        <rect key="frame" x="70" y="41" width="295" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -50,17 +50,20 @@
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="ar9-Et-1Y5" firstAttribute="top" secondItem="iQW-iC-qlO" secondAttribute="top" id="4W5-xn-v2k"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RkH-5H-gjk" secondAttribute="bottom" constant="10" id="6Yg-Vl-6zf"/>
                     <constraint firstItem="ar9-Et-1Y5" firstAttribute="bottom" secondItem="iQW-iC-qlO" secondAttribute="bottom" id="93a-Gs-BHB"/>
                     <constraint firstItem="p1m-0f-pWq" firstAttribute="top" secondItem="ar9-Et-1Y5" secondAttribute="top" id="Gm7-FZ-6Oh"/>
                     <constraint firstAttribute="trailing" secondItem="p1m-0f-pWq" secondAttribute="trailing" constant="10" id="XF5-wH-Fxu"/>
+                    <constraint firstAttribute="trailing" secondItem="igL-JQ-hu4" secondAttribute="trailing" constant="10" id="cgv-W0-p0V"/>
                     <constraint firstItem="RkH-5H-gjk" firstAttribute="leading" secondItem="1iL-GE-kax" secondAttribute="leading" constant="10" id="dyt-TG-qe7"/>
                     <constraint firstItem="ar9-Et-1Y5" firstAttribute="leading" secondItem="iQW-iC-qlO" secondAttribute="trailing" constant="5" id="fL4-35-q1U"/>
-                    <constraint firstItem="igL-JQ-hu4" firstAttribute="top" secondItem="iQW-iC-qlO" secondAttribute="bottom" constant="5" id="feI-Tl-69c"/>
+                    <constraint firstItem="igL-JQ-hu4" firstAttribute="top" secondItem="iQW-iC-qlO" secondAttribute="bottom" constant="10" id="feI-Tl-69c"/>
                     <constraint firstItem="igL-JQ-hu4" firstAttribute="leading" secondItem="iQW-iC-qlO" secondAttribute="leading" id="g5Y-wh-y0g"/>
                     <constraint firstItem="p1m-0f-pWq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ar9-Et-1Y5" secondAttribute="trailing" constant="10" id="gNE-lN-sUs"/>
                     <constraint firstItem="RkH-5H-gjk" firstAttribute="top" secondItem="1iL-GE-kax" secondAttribute="top" constant="10" id="kaU-fw-7ja"/>
                     <constraint firstItem="iQW-iC-qlO" firstAttribute="top" secondItem="RkH-5H-gjk" secondAttribute="top" id="tJr-5S-chW"/>
                     <constraint firstItem="iQW-iC-qlO" firstAttribute="leading" secondItem="RkH-5H-gjk" secondAttribute="trailing" constant="10" id="w4w-wc-Mhn"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="igL-JQ-hu4" secondAttribute="bottom" constant="10" id="yrW-hd-7YF"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -10,8 +10,6 @@ import Foundation
 
 extension Date {
     enum Constants {
-        static let secondsInWeek: Double = 604800
-        static let secondsInDay: Double = 86400
         static let secondsInHour: Double = 3600
         static let secondsInMinute: Double = 60
     }
