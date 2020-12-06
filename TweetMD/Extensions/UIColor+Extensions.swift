@@ -18,7 +18,7 @@ extension UIColor {
         return UIColor(hex: "9B9B9B")
     }
     
-    static var foregroundRetweetedUser: UIColor {
+    static var actionBlue: UIColor {
         return UIColor(hex: "6191C5")
     }
 

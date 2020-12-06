@@ -23,6 +23,8 @@ class FeedCell: UITableViewCell {
     // This was interesting. In this case I needed a decent chunk of logic to handle finding the user handles in a string so I was going to create a view model, however I also figured this logic might be handy in other areas of the app (in the future), so I decided to just create a logic controller that's a bit less tied to the view itself and more shareable throughout the app.
     let tweetLogicController = TweetLC()
     
+    // MARK: - Init
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -31,6 +33,8 @@ class FeedCell: UITableViewCell {
         
         setupColors()
     }
+    
+    // MARK: - Setup
     
     func configure(with tweet: Tweet) {
         nameLabel.text = tweet.author.name

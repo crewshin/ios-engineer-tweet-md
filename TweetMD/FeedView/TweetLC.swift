@@ -14,7 +14,7 @@ struct TweetLC {
         
         if let handleRanges = findRangesForHandlesInTweet(text: text) {
             for range in handleRanges {
-                outputString.addAttributes([.foregroundColor: UIColor.foregroundRetweetedUser], range: range)
+                outputString.addAttributes([.foregroundColor: UIColor.actionBlue], range: range)
             }
         }
         

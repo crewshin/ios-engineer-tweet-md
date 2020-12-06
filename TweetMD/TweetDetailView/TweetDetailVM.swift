@@ -21,6 +21,7 @@ protocol TweetDetailVMContract {
 class TweetDetailVM: TweetDetailVMContract {
     
     // MARK: Properties
+    
     let tweet: Tweet
     
     var authorName: String { return tweet.author.name }
@@ -43,12 +44,10 @@ class TweetDetailVM: TweetDetailVMContract {
     var dateString: String {
         return tweet.createdAt.fullDateString()
     }
-
     
     // MARK: Init
+    
     init(tweet: Tweet) {
         self.tweet = tweet
     }
-    
-    
 }

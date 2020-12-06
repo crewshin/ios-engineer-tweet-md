@@ -12,7 +12,6 @@
 		5E1505B321E95BD00094FF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1505B221E95BD00094FF45 /* AppDelegate.swift */; };
 		5E1505B521E95BD00094FF45 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1505B421E95BD00094FF45 /* FeedVC.swift */; };
 		5E1505BA21E95BD20094FF45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E1505B921E95BD20094FF45 /* Assets.xcassets */; };
-		5E1505C821E95BD30094FF45 /* TweetMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1505C721E95BD30094FF45 /* TweetMDTests.swift */; };
 		5ED44DEE21F15C5D004E34AA /* FeedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED44DED21F15C5D004E34AA /* FeedVC.xib */; };
 		5ED44DF021F15F49004E34AA /* FeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED44DEF21F15F49004E34AA /* FeedVM.swift */; };
 		5ED44DF521F293E1004E34AA /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED44DF421F293E1004E34AA /* Tweet.swift */; };
@@ -53,7 +52,6 @@
 		5E1505B921E95BD20094FF45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E1505BE21E95BD20094FF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E1505C321E95BD20094FF45 /* TweetMDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetMDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E1505C721E95BD30094FF45 /* TweetMDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMDTests.swift; sourceTree = "<group>"; };
 		5E1505C921E95BD30094FF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED44DED21F15C5D004E34AA /* FeedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedVC.xib; sourceTree = "<group>"; };
 		5ED44DEF21F15F49004E34AA /* FeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVM.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				5E1505C921E95BD30094FF45 /* Info.plist */,
-				5E1505C721E95BD30094FF45 /* TweetMDTests.swift */,
 				7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */,
 				7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */,
 				7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */,
@@ -420,7 +417,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1505C821E95BD30094FF45 /* TweetMDTests.swift in Sources */,
 				7E338039257D36D100404ADF /* Date+ExtensionsTests.swift in Sources */,
 				7ED94EA1257BFE3D006D53EC /* TweetLCTests.swift in Sources */,
 				7ED94E97257BE590006D53EC /* UIColor+ExtensionsTests.swift in Sources */,

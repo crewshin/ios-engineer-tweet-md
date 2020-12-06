@@ -26,10 +26,6 @@ class FeedVM: FeedVMContract {
     
     private var medicalTweetsDidChange: (() -> Void)?
     
-    func setMedicalTweetsDidChangeClosure(callback: @escaping () -> Void) {
-        medicalTweetsDidChange = callback
-    }
-    
     // MARK: Init
     
     init(webProvider: WebProviderContract) {
@@ -43,4 +39,9 @@ class FeedVM: FeedVMContract {
         }
     }
     
+    // MARK: Misc
+    
+    func setMedicalTweetsDidChangeClosure(callback: @escaping () -> Void) {
+        medicalTweetsDidChange = callback
+    }
 }

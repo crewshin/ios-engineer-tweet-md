@@ -12,6 +12,7 @@ import UIKit
 class TweetDetailVC: UIViewController {
     
     // MARK: Properties
+    
     private let viewModel: TweetDetailVMContract
     
     @IBOutlet private var thumbnailImageView: UIImageView!
@@ -22,6 +23,7 @@ class TweetDetailVC: UIViewController {
     @IBOutlet private var dateLabel: UILabel!
     
     // MARK: Init
+    
     init(viewModel: TweetDetailVMContract) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: type(of: self)), bundle: Bundle.main)
@@ -32,6 +34,7 @@ class TweetDetailVC: UIViewController {
     }
     
     // MARK: View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
