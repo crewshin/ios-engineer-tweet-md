@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIColor {    
+extension UIColor {
     static var foregroundPrimary: UIColor {
         return UIColor(hex: "000000")
     }

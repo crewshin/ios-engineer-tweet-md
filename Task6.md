@@ -11,4 +11,6 @@ For this task, please take a look at the TweetMD project as a whole (as if you w
 
 3. Removed the actionBlue function from UIColor+Extensions because it wasn't used.
 
-4. 
+4. Twitters default avatar size is 48x48 but the specs ask for a 50x50 avatar image. I just wanted to point out the fact that it might make sense to update the imageView to the image size since they are so close in size.
+
+5. 

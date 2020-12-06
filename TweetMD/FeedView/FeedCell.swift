@@ -38,12 +38,20 @@ class FeedCell: UITableViewCell {
         contentLabel.attributedText = tweetLogicController.buildAttributedContentString(text: tweet.text)
         timeElapsedLabel.text = Date.timeElapsedString(since: tweet.createdAt)
         
-        if
-            let profileImageUrl = tweet.author.profileImageUrl,
-            let imageData = try? Data(contentsOf: profileImageUrl) {
-            thumbnailImage.image = UIImage(data: imageData)
-        } else {
-            thumbnailImage.image = nil
+        // I would probably set this to a default/loading image of some kind here so it has a starting point.
+        thumbnailImage.image = nil
+        if let profileImageUrl = tweet.author.profileImageUrl {
+            let webProvider = WebProvider()
+            webProvider.fetchImageAt(url: profileImageUrl) { (results) in
+                switch results {
+                case .failure(_):
+                    // Fail silently.
+                    self.thumbnailImage.image = nil
+                case .success(let imageData):
+                    let image = UIImage(data: imageData)
+                    self.thumbnailImage.image = image
+                }
+            }
         }
     }
     
@@ -52,5 +60,9 @@ class FeedCell: UITableViewCell {
         handleLabel.textColor = .foregroundSecondary
         timeElapsedLabel.textColor = .foregroundSecondary
         contentLabel.textColor = .foregroundPrimary
+    }
+    
+    override func prepareForReuse() {
+        thumbnailImage.image = nil
     }
 }

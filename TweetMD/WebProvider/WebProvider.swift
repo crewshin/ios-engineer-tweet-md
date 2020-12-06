@@ -22,6 +22,7 @@ enum Constants {
 
 protocol WebProviderContract {
     func fetchMedicalTweets(completion: @escaping (Swift.Result<[Tweet], FetchError>) -> Void)
+    func fetchImageAt(url: URL, completion: @escaping (Swift.Result<Data, FetchError>) -> Void)
 }
 
 class WebProvider: WebProviderContract {
@@ -50,5 +51,18 @@ class WebProvider: WebProviderContract {
                 
                 completion(.success(tweetsContainer.tweets))
         }
+    }
+    
+    func fetchImageAt(url: URL, completion: @escaping (Swift.Result<Data, FetchError>) -> Void) {
+        Alamofire.request(url, headers: ["Authorization": "Bearer \(Constants.token)"])
+            .validate()
+            .responseData { (responseData) in
+                guard let data = responseData.data, responseData.result.isSuccess else {
+                    completion(.failure(.responseFailure))
+                    return
+                }
+                
+                completion(.success(data))
+            }
     }
 }
