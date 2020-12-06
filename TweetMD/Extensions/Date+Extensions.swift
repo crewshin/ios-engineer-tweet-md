@@ -34,10 +34,10 @@ extension Date {
         
         if secondsBeforeNow < 60 {
             return "just now"
-        } else if hoursBeforeNow < 24 {
-            return "\(Int(hoursBeforeNow))h"
         } else if minutesBeforeNow < 60 {
             return "\(Int(minutesBeforeNow))m"
+        } else if hoursBeforeNow < 24 {
+            return "\(Int(hoursBeforeNow))h"
         } else if daysBeforeNow < 7 {
             return "\(Int(daysBeforeNow))d"
         } else {
