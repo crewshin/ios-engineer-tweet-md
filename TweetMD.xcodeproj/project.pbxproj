@@ -28,6 +28,7 @@
 		7E338039257D36D100404ADF /* Date+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */; };
 		7E338040257EA2CD00404ADF /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33803F257EA2CD00404ADF /* Favorites.swift */; };
 		7E338044257EB38D00404ADF /* FavoritesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E338043257EB38D00404ADF /* FavoritesTests.swift */; };
+		7E338048257EBA8100404ADF /* TweetDetailVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E338047257EBA8100404ADF /* TweetDetailVMTests.swift */; };
 		7ED94E97257BE590006D53EC /* UIColor+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */; };
 		7ED94E9D257BECD7006D53EC /* TweetLC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94E9C257BECD7006D53EC /* TweetLC.swift */; };
 		7ED94EA1257BFE3D006D53EC /* TweetLCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */; };
@@ -71,6 +72,7 @@
 		7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		7E33803F257EA2CD00404ADF /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		7E338043257EB38D00404ADF /* FavoritesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTests.swift; sourceTree = "<group>"; };
+		7E338047257EBA8100404ADF /* TweetDetailVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailVMTests.swift; sourceTree = "<group>"; };
 		7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		7ED94E9C257BECD7006D53EC /* TweetLC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLC.swift; sourceTree = "<group>"; };
 		7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLCTests.swift; sourceTree = "<group>"; };
@@ -149,11 +151,11 @@
 		5E1505C621E95BD30094FF45 /* TweetMDTests */ = {
 			isa = PBXGroup;
 			children = (
+				7E33804B257EBA9200404ADF /* Extensions */,
+				7E33804C257EBAAA00404ADF /* FeedView */,
+				7E338056257EBABF00404ADF /* TweetDetailView */,
+				7E338051257EBAB600404ADF /* Favorites */,
 				5E1505C921E95BD30094FF45 /* Info.plist */,
-				7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */,
-				7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */,
-				7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */,
-				7E338043257EB38D00404ADF /* FavoritesTests.swift */,
 			);
 			path = TweetMDTests;
 			sourceTree = "<group>";
@@ -213,6 +215,39 @@
 				7E33803F257EA2CD00404ADF /* Favorites.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		7E33804B257EBA9200404ADF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */,
+				7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E33804C257EBAAA00404ADF /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */,
+			);
+			path = FeedView;
+			sourceTree = "<group>";
+		};
+		7E338051257EBAB600404ADF /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				7E338043257EB38D00404ADF /* FavoritesTests.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		7E338056257EBABF00404ADF /* TweetDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				7E338047257EBA8100404ADF /* TweetDetailVMTests.swift */,
+			);
+			path = TweetDetailView;
 			sourceTree = "<group>";
 		};
 		A0514E5CFF12A4099BB5A920 /* Frameworks */ = {
@@ -435,6 +470,7 @@
 				7E338039257D36D100404ADF /* Date+ExtensionsTests.swift in Sources */,
 				7E338044257EB38D00404ADF /* FavoritesTests.swift in Sources */,
 				7ED94EA1257BFE3D006D53EC /* TweetLCTests.swift in Sources */,
+				7E338048257EBA8100404ADF /* TweetDetailVMTests.swift in Sources */,
 				7ED94E97257BE590006D53EC /* UIColor+ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
