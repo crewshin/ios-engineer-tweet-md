@@ -10,20 +10,23 @@ import Foundation
 import UIKit
 
 protocol TweetDetailVMContract {
+    var tweet: Tweet { get }
+    var favorites: Favorites { get }
     var authorName: String { get }
     var authorHandle: String { get }
     var authorProfilePhoto: UIImage? { get }
     var content: String { get }
     var timeElapsedString: String { get }
     var dateString: String { get }
+    var isFavorite: Bool { get }
 }
 
 class TweetDetailVM: TweetDetailVMContract {
     
     // MARK: Properties
     
-    let tweet: Tweet
-    
+    var tweet: Tweet
+    var favorites: Favorites
     var authorName: String { return tweet.author.name }
     var authorHandle: String { return tweet.author.handle }
     var content: String { return tweet.text }
@@ -38,16 +41,21 @@ class TweetDetailVM: TweetDetailVMContract {
     }
     
     var timeElapsedString: String {
-       return Date.timeElapsedString(since: tweet.createdAt)
+        return Date.timeElapsedString(since: tweet.createdAt)
     }
     
     var dateString: String {
         return tweet.createdAt.fullDateString()
     }
     
+    var isFavorite: Bool {
+        return favorites.isFavorite(id: tweet.id)
+    }
+    
     // MARK: Init
     
-    init(tweet: Tweet) {
+    init(tweet: Tweet, favorites: Favorites) {
         self.tweet = tweet
+        self.favorites = favorites
     }
 }

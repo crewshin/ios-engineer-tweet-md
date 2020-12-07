@@ -5,13 +5,13 @@ For this task, please take a look at the TweetMD project as a whole (as if you w
 
 ## Comments
 
-1. Updated colors to be computed vars instead of func's so they read a tad better.
+1. Updated colors to be computed vars instead of func's so they read a tad better and are more in line with standard iOS standards.
 
 2. Two date constants were unused. While I understand having a complete list of constants might be nice, I chose to clean up this unused code.
 
 3. Twitters default avatar size is 48x48 but the TweetMD specs ask for a 50x50 avatar image. I just wanted to point out the fact that it might make sense to update the imageView to the image size since they are so close in size to reduce any up-sampling issues.
 
-4. I think it's good habit to organize file in this order:
+4. I think it's good habit to organize files in this order:
     * Protocols
     * Classes/Structs
         * Properties/Computed Properties/IBOutlets
@@ -21,4 +21,6 @@ For this task, please take a look at the TweetMD project as a whole (as if you w
         * Extensions
     So I did a quick cleanup pass.
 
-5. 
+5. RE: Favorites. It's a bit out of scope for this test, however if this was a real app I'd consider implementing some kind of persistance. Realm, sqlite, etc. to store user favorites instead of my simple ephemeral storage implementation. edit: I see this is called out in the instructions now.
+
+6. 

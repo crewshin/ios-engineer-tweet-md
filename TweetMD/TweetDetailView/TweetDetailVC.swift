@@ -9,11 +9,17 @@
 import Foundation
 import UIKit
 
+protocol TweetDetailVCDelegate: class {
+    func favoriteButtonTappedFor(id: Int)
+}
+
 class TweetDetailVC: UIViewController {
     
     // MARK: Properties
     
     private let viewModel: TweetDetailVMContract
+    
+    weak var delegate: TweetDetailVCDelegate?
     
     @IBOutlet private var thumbnailImageView: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
@@ -43,5 +49,26 @@ class TweetDetailVC: UIViewController {
         contentLabel.text = viewModel.content
         dateLabel.text = viewModel.dateString
         thumbnailImageView.image = viewModel.authorProfilePhoto
+        
+        setupFavoriteButton()
+    }
+    
+    // MARK: Setup
+    
+    func setupFavoriteButton() {
+        if viewModel.isFavorite {
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+            favoriteButton.backgroundColor = .darkGray
+        } else {
+            favoriteButton.setTitle("Add to Favorites", for: .normal)
+            favoriteButton.backgroundColor = .actionBlue
+        }
+    }
+    
+    // MARK: IBActions
+    
+    @IBAction func favoritesButtonTapped(_ sender: UIButton) {
+        delegate?.favoriteButtonTappedFor(id: viewModel.tweet.id)
+        setupFavoriteButton()
     }
 }

@@ -26,6 +26,8 @@
 		5ED44E0B21FA8575004E34AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED44E0A21FA8574004E34AA /* UIColor+Extensions.swift */; };
 		5ED44E0F21FBB654004E34AA /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED44E0E21FBB654004E34AA /* LaunchView.xib */; };
 		7E338039257D36D100404ADF /* Date+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */; };
+		7E338040257EA2CD00404ADF /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33803F257EA2CD00404ADF /* Favorites.swift */; };
+		7E338044257EB38D00404ADF /* FavoritesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E338043257EB38D00404ADF /* FavoritesTests.swift */; };
 		7ED94E97257BE590006D53EC /* UIColor+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */; };
 		7ED94E9D257BECD7006D53EC /* TweetLC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94E9C257BECD7006D53EC /* TweetLC.swift */; };
 		7ED94EA1257BFE3D006D53EC /* TweetLCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */; };
@@ -67,6 +69,8 @@
 		5ED44E0A21FA8574004E34AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		5ED44E0E21FBB654004E34AA /* LaunchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
 		7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		7E33803F257EA2CD00404ADF /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		7E338043257EB38D00404ADF /* FavoritesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTests.swift; sourceTree = "<group>"; };
 		7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		7ED94E9C257BECD7006D53EC /* TweetLC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLC.swift; sourceTree = "<group>"; };
 		7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLCTests.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				5ED44DFC21F8DD29004E34AA /* WebProvider */,
 				5ED44DF121F24888004E34AA /* FeedView */,
 				5ED44E0321FA7082004E34AA /* TweetDetailView */,
+				7E33803E257EA2B200404ADF /* Favorites */,
 				5E1505B221E95BD00094FF45 /* AppDelegate.swift */,
 				5E1505B921E95BD20094FF45 /* Assets.xcassets */,
 				5E1505BE21E95BD20094FF45 /* Info.plist */,
@@ -148,6 +153,7 @@
 				7ED94E96257BE590006D53EC /* UIColor+ExtensionsTests.swift */,
 				7ED94EA0257BFE3D006D53EC /* TweetLCTests.swift */,
 				7E338038257D36D100404ADF /* Date+ExtensionsTests.swift */,
+				7E338043257EB38D00404ADF /* FavoritesTests.swift */,
 			);
 			path = TweetMDTests;
 			sourceTree = "<group>";
@@ -199,6 +205,14 @@
 				5ED44E0821FA70CB004E34AA /* TweetDetailVM.swift */,
 			);
 			path = TweetDetailView;
+			sourceTree = "<group>";
+		};
+		7E33803E257EA2B200404ADF /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				7E33803F257EA2CD00404ADF /* Favorites.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		A0514E5CFF12A4099BB5A920 /* Frameworks */ = {
@@ -410,6 +424,7 @@
 				5ED44E0B21FA8575004E34AA /* UIColor+Extensions.swift in Sources */,
 				5ED44E0521FA7098004E34AA /* TweetDetailVC.swift in Sources */,
 				5ED44DFF21F8DDF1004E34AA /* User.swift in Sources */,
+				7E338040257EA2CD00404ADF /* Favorites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E338039257D36D100404ADF /* Date+ExtensionsTests.swift in Sources */,
+				7E338044257EB38D00404ADF /* FavoritesTests.swift in Sources */,
 				7ED94EA1257BFE3D006D53EC /* TweetLCTests.swift in Sources */,
 				7ED94E97257BE590006D53EC /* UIColor+ExtensionsTests.swift in Sources */,
 			);

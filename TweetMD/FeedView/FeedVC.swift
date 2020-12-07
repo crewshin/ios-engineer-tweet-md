@@ -13,10 +13,12 @@ class FeedVC: UIViewController {
     // MARK: Properties
     fileprivate let viewModel: FeedVMContract
     @IBOutlet private var tableView: UITableView!
+    let favorites: Favorites
     
     // MARK: Init
     init(viewModel: FeedVMContract) {
         self.viewModel = viewModel
+        self.favorites = Favorites()
         super.init(nibName: String(describing: type(of: self)), bundle: Bundle.main)
     }
     
@@ -38,7 +40,7 @@ class FeedVC: UIViewController {
     }
 }
 
-// MARK: TableView Methods
+// MARK: UITableViewDelegate, UITableViewDataSource
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.medicalTweets.count
@@ -55,7 +57,8 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         else { return UITableViewCell() }
         
         let tweet = viewModel.medicalTweets[indexPath.row]
-        cell.configure(with: tweet)
+        cell.configure(with: tweet, favorite: favorites.isFavorite(id: tweet.id))
+        
         return cell
     }
     
@@ -63,8 +66,16 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let tweet = viewModel.medicalTweets[indexPath.row]
-        let detailVC = TweetDetailVC(viewModel: TweetDetailVM(tweet: tweet))
+        let detailVC = TweetDetailVC(viewModel: TweetDetailVM(tweet: tweet, favorites: favorites))
+        detailVC.delegate = self
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
+// MARK: - TweetDetailVCDelegate
+extension FeedVC: TweetDetailVCDelegate {
+    func favoriteButtonTappedFor(id: Int) {
+        favorites.saveOrRemoveFavorite(id: id)
+        tableView.reloadData()
+    }
+}

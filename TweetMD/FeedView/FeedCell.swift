@@ -36,13 +36,13 @@ class FeedCell: UITableViewCell {
     
     // MARK: - Setup
     
-    func configure(with tweet: Tweet) {
+    func configure(with tweet: Tweet, favorite: Bool) {
         nameLabel.text = tweet.author.name
         handleLabel.text = tweet.author.handle
         contentLabel.attributedText = tweetLogicController.buildAttributedContentString(text: tweet.text)
         timeElapsedLabel.text = Date.timeElapsedString(since: tweet.createdAt)
         
-        // I would probably set this to a default/loading image of some kind here so it has a starting point.
+        // I would probably set this to a default/loading image of some kind here so it has a starting point. I typically just use something like SDWebImage/Nuke for this type of task.
         thumbnailImage.image = nil
         if let profileImageUrl = tweet.author.profileImageUrl {
             let webProvider = WebProvider()
@@ -57,6 +57,8 @@ class FeedCell: UITableViewCell {
                 }
             }
         }
+        
+        contentView.backgroundColor = favorite ? .yellow : .white
     }
     
     func setupColors() {
