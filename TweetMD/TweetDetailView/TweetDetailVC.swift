@@ -48,9 +48,9 @@ class TweetDetailVC: UIViewController {
         handleLabel.text = viewModel.authorHandle
         contentLabel.text = viewModel.content
         dateLabel.text = viewModel.dateString
-        thumbnailImageView.image = viewModel.authorProfilePhoto
         
         setupFavoriteButton()
+        setupProfileImage()
     }
     
     // MARK: Setup
@@ -62,6 +62,21 @@ class TweetDetailVC: UIViewController {
         } else {
             favoriteButton.setTitle("Add to Favorites", for: .normal)
             favoriteButton.backgroundColor = .actionBlue
+        }
+    }
+    
+    func setupProfileImage() {
+        // Use loading image here.
+        // self.thumbnailImageView.image = UIImage(named: "loadingImage")
+        viewModel.fetchProfilePhoto { (result) in
+            switch result {
+            case .failure(_):
+                // Display "no-image" here instead of nil.
+                self.thumbnailImageView.image = nil
+            case .success(let imageData):
+                let image = UIImage(data: imageData)
+                self.thumbnailImageView.image = image
+            }
         }
     }
     

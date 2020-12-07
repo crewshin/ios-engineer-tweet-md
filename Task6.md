@@ -23,4 +23,4 @@ For this task, please take a look at the TweetMD project as a whole (as if you w
 
 5. RE: Favorites. It's a bit out of scope for this test, however if this was a real app I'd consider implementing some kind of persistance. Realm, sqlite, etc. to store user favorites instead of my simple ephemeral storage implementation. edit: I see this is called out in the instructions now.
 
-6. 
+6. I noticed that in the `TweetDetailVM` class, we are importing UIKit. I typically don't import anything UIKit related into VM's so I would probably refactor this a tad. Also related and worth noting is that the detail screen also loads the profile image in a less than optimal way. I'd refactor this to work a bit like the cell's implementation.
