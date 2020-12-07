@@ -8,8 +8,6 @@
 
 import Foundation
 
-struct UserMention { }
-
 struct User: Decodable {
     let id: Int
     let name: String
@@ -25,5 +23,29 @@ struct User: Decodable {
         case name
         case handle = "screen_name"
         case profileImageUrlString = "profile_image_url_https"
+    }
+}
+
+struct UserMention: Decodable {
+    let id: Int
+    let screenName: String
+    let name: String
+    let idStr: String
+    let indices: [Int]
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case screenName = "screen_name"
+        case name
+        case idStr = "id_str"
+        case indices
+    }
+}
+
+struct Entities: Decodable {
+    let userMentions: [UserMention]
+
+    enum CodingKeys: String, CodingKey {
+        case userMentions = "user_mentions"
     }
 }

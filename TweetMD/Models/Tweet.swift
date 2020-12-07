@@ -19,7 +19,7 @@ struct TweetsContainer: Decodable {
 struct Tweet: Decodable {
     let id: Int
     let text: String
-    let userMentions: [UserMention] = []
+    let entities: Entities
     let author: User
     let createdAtString: String
     
@@ -34,6 +34,7 @@ struct Tweet: Decodable {
         case text
         case author = "user"
         case createdAtString = "created_at"
+        case entities
     }
     
     public init(from decoder: Decoder) throws {
@@ -43,5 +44,6 @@ struct Tweet: Decodable {
         text = try container.decode(String.self, forKey: .text)
         author = try container.decode(User.self, forKey: .author)
         createdAtString = try container.decode(String.self, forKey: .createdAtString)
+        entities = try container.decode(Entities.self, forKey: .entities)
     }
 }
